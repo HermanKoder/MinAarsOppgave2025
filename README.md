@@ -1,0 +1,2 @@
+# MinAarsOppgave2025
+ 
