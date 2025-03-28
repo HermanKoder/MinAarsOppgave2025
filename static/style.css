@@ -14,8 +14,14 @@ body {
     justify-content: center;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    background-color: green;
+    background-color: aliceblue;
     width: 100%;
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+}
+
+.navbar h1 {
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .navbar a {
@@ -27,10 +33,59 @@ body {
     padding-bottom: 10px;
     margin-left: 10px;
     margin-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
 }
 
-#mango {
+.navbar a:hover,
+.navbar a:focus,
+.navbar a:active {
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+#titleHeader {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+#titleHeader:hover,
+#titleHeader:focus,
+#titleHeader:active {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+}
+
+#mangoClick {
     width: 200px;
+}
+
+.mangoLeaderboard {
+    text-decoration: none;
+    color: black;
+    border: black solid 2px;
+    width: 300px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 footer {

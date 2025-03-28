@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %} Game Page - Mango Clicker App {% endblock %}
+
+{% block content %}
+
+<br>
+<br>
+
+<a><img id="mangoClick" src="/static/images/mango-svgrepo-com.svg" alt="Mango svg"></a>
+
+<div class="mangoScore">
+    <p>Mangos:</p>
+    <h2 id="mangoScore">0</h2>
+    <a id="saveScore">Save Score</a>
+</div>
+
+<br>
+
+<div class="mangoLeaderboard">
+    <h1>Mango Leaderboard</h1>
+    <p>1st:</p>
+    <p>2nd:</p>
+    <p>3rd:</p>
+    <p>4th:</p>
+    <p>5th:</p>
+    <p>6th:</p>
+    <p>7th:</p>
+    <p>8th:</p>
+    <p>9th:</p>
+    <p>10th:</p>
+</div>
+{% endblock %}
