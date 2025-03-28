@@ -1,6 +1,7 @@
-var mangoClick = document.getElementById("mango")
+var mangoScoreEl = document.getElementById("mangoScore")
+var mangoClickEl = document.getElementById("mangoClick")
 
-mangoClick.addEventListener("click", plusPoeng)
+mangoClickEl.addEventListener("click", plusPoeng)
 
 function plusPoeng() {
     
