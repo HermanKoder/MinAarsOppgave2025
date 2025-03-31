@@ -24,7 +24,7 @@ body {
     padding-right: 1rem;
 }
 
-.navbar a {
+.navbarClass {
     text-decoration: none;
     color: black;
     border: 2px solid black;
@@ -44,9 +44,9 @@ body {
     transition-property: box-shadow, transform;
 }
 
-.navbar a:hover,
-.navbar a:focus,
-.navbar a:active {
+.navbarClass:hover,
+.navbarClass:focus,
+.navbarClass:active {
     box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
