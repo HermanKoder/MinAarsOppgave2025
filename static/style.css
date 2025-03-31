@@ -88,6 +88,10 @@ body {
     margin-right: 10px;
 }
 
+.about{
+    width: 500px;
+}
+
 footer {
     padding: 2rem;
 }
