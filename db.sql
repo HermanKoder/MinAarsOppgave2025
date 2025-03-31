@@ -1,1 +1,5 @@
 CREATE DATABASE mangoDB;
+
+USE mangoDB
+
+CREATE TABLES
