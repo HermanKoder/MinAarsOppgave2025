@@ -4,25 +4,47 @@
 
 {% block content %}
 
-<br>
-<br>
+<main>
+    <div class="mangoScore">
+        <a><img id="mangoClick" src="/static/images/mango-svgrepo-com.svg" alt="Mango svg"></a>
+        <p>Mangos:</p>
+        <h2 id="mangoScore">0</h2>
+        <p id="notEnoughMangos"></p>
+    </div>
 
-<a><img id="mangoClick" src="/static/images/mango-svgrepo-com.svg" alt="Mango svg"></a>
+    <div class="upgradeList">
 
-<div class="mangoScore">
-    <p>Mangos:</p>
-    <h2 id="mangoScore">0</h2>
-    <a id="saveScore">Save Score</a>
-</div>
+        <div class="upgrade">
+            <h2 id="strongerHandsHeader">Stronger Hands: 1</h2>
+            <p id="strongerHandsPrice">10</p>
+            <a id="strongerHandsBuy" class="buy">Buy</a>
+        </div>
 
-<br>
+        <div class="upgrade">
+            <h2 id="farmerHeader">Farmer: 0</h2>
+            <p id="farmerPrice">50</p>
+            <a id="farmerBuy" class="buy">Buy</a>
+        </div>
 
-<div class="mangoLeaderboard">
-    <h1>Mango Leaderboard</h1>
-    <p>1st:</p>
-    <p>2nd:</p>
-    <p>3rd:</p>
-    <p>4th:</p>
-    <p>5th:</p>
-</div>
+        <div class="upgrade">
+            <h2 id="upgradeFarmerHeader">Upgrade Farmers: 0</h2>
+            <p id="upgradeFarmerPrice">100</p>
+            <a id="upgradeFarmerBuy" class="buy">Buy</a>
+        </div>
+
+    </div>
+
+    <div class="mangoLeaderboard">
+
+        <h1>Mango Leaderboard</h1>
+        <p>1st:</p>
+        <p>2nd:</p>
+        <p>3rd:</p>
+        <p>4th:</p>
+        <p>5th:</p>
+        <input type="text" id="nameSaveScore" placeholder="Name">
+        <a id="saveScore">Save Score</a>
+
+    </div>
+</main>
 {% endblock %}
