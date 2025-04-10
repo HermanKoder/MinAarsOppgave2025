@@ -5,9 +5,10 @@
 {% block content %}
 
 <h1>Register</h1>
-<input type="text" id="userReg" placeholder="Name">
-<input type="text" id="epostReg" placeholder="Epost">
-<input type="text" id="passwordReg" placeholder="Password">
-
+<form action="/registerRegister", method="post">
+    <input type="text" name="userReg" placeholder="Name">
+    <input type="password" name="passwordReg" placeholder="Password">
+    <button type="submit">Submit</button>
+</form>
 
 {% endblock %}

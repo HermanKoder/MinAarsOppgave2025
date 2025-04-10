@@ -5,8 +5,10 @@
 {% block content %}
 
 <h1>Login</h1>
-<input type="text" id="userLogin" placeholder="Name">
-<input type="text" id="passwordLogin" placeholder="Password">
-
+<form action="/loginUser" method="post">
+    <input type="text" name="userLogin" placeholder="Name">
+    <input type="password" name="passwordLogin" placeholder="Password">
+    <button type="submit">Submit</button>
+</form>
 
 {% endblock %}

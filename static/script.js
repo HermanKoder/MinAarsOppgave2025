@@ -1,30 +1,30 @@
 
 const mangoScoreEl = document.getElementById("mangoScore") //The score that is displayed
 const mangoClickEl = document.getElementById("mangoClick") //Image ID that activates on click
-const strongerHandsPriceEl = document.getElementById("strongerHandsPrice")
-const farmerPriceEl = document.getElementById("farmerPrice")
-const upgradeFarmerPriceEl = document.getElementById("upgradeFarmerPrice")
-const strongerHandsHeaderEl = document.getElementById("strongerHandsHeader")
-const farmerHeaderEl = document.getElementById("farmerHeader")
-const upgradeFarmerHeaderEl = document.getElementById("upgradeFarmerHeader")
-const strongerHandsBuyEl = document.getElementById("strongerHandsBuy")
-const farmerBuyEl = document.getElementById("farmerBuy")
-const upgradeFarmerBuyEl = document.getElementById("upgradeFarmerBuy")
-const notEnoughMangosEl = document.getElementById("notEnoughMangos")
+const strongerHandsPriceEl = document.getElementById("strongerHandsPrice") // More per click cost
+const farmerPriceEl = document.getElementById("farmerPrice") // farmer cost
+const upgradeFarmerPriceEl = document.getElementById("upgradeFarmerPrice") // more clicks per farmer cost
+const strongerHandsHeaderEl = document.getElementById("strongerHandsHeader") // more per click cost DISPLAY
+const farmerHeaderEl = document.getElementById("farmerHeader") // farmer cost DISPLAY
+const upgradeFarmerHeaderEl = document.getElementById("upgradeFarmerHeader") //  more clicks per farmer cost DISPLAY
+const strongerHandsBuyEl = document.getElementById("strongerHandsBuy") // Button for buying upgrade 
+const farmerBuyEl = document.getElementById("farmerBuy") // Button for buying upgrade 
+const upgradeFarmerBuyEl = document.getElementById("upgradeFarmerBuy") // Button for buying upgrade 
+const notEnoughMangosEl = document.getElementById("notEnoughMangos") // Not enough mangos message
 
 mangoOnClick = 1 //The amount of points that is raised on click
 mangoPoints = 0 //The standard amount of points u start with
 strongerHands = 1 //The standard amount of strongerHands u start with
 farmer = 0 //The standard amount of farmers u start with
 upgradeFarmer = 0 //The standard amount of upgraded Farmers u start with
-prices = [10, 50, 100]
+prices = [10, 50, 100] // start prices
 
 
 mangoClickEl.addEventListener("click", plusPoints)
 function plusPoints() {
     mangoPoints += mangoOnClick
     mangoScoreEl.innerText = mangoPoints
-}
+} // 
 
 strongerHandsBuyEl.addEventListener("click", strongerHandsBuyJS)
 function strongerHandsBuyJS() {
@@ -86,3 +86,7 @@ setInterval(function() {
         mangoScoreEl.innerText = mangoPoints
     }
 }, 1000)
+
+document.getElementById("saveScoreForm").addEventListener("submit", function(event) {
+    document.getElementById("hiddenMangoScore").value = mangoPoints;
+});

@@ -184,10 +184,6 @@ main {
     user-select: none;
 }
 
-.about{
-    width: 500px;
-}
-
 #notEnoughMangos {
     color: red;
     user-select: none;
