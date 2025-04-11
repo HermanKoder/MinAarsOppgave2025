@@ -22,6 +22,9 @@ def index():
 def game():
     return render_template("game.html")
 
+@app.route("/account")
+def account():
+    return render_template("account.html")
 
 @app.route("/register")
 def register():
@@ -51,19 +54,18 @@ def loginUser():
         cursor = conn.cursor(dictionary=True)
         cursor.execute("SELECT * FROM users WHERE navn = %s AND passord = %s", (loginName, loginPassword))
         user = cursor.fetchone()
+        conn.close()
+
         if user:
-            session['user_id'] = user['id']
-            session['username'] = user['navn']
-            cursor.execute("SELECT * FROM mangoScore WHERE user_id = %s", (user['id'],))
-            score_entry = cursor.fetchone()
-            if not score_entry:
-                cursor.execute("INSERT INTO mangoScore (mangos, user_id) VALUES (%s, %s)", (0, user['id']))
-                conn.commit()
-            conn.close()
-            return redirect('/game')
+            session['username'] = user['navn']  # Store username in session
+            return redirect("/")  # Redirect to home page after login
         else:
-            conn.close()
             return render_template('login.html', error="Invalid credentials")
+        
+@app.route("/logout")
+def logout():
+    session.clear()
+    return redirect("/")
 
 if __name__ == "__main__":
     app.run(debug=True)

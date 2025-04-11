@@ -11,15 +11,14 @@
 <body>
 
     <div class="navbar">
-        {% if user_name %}
-        <div class="navbarClass">Logged in as: {{ user_name }}</div>
-        {% endif %}
         <a href="/" class="navbarClass">Home</a>
         <a href="/game"><h1 id="titleHeader"> Mango Clicker </h1></a>
-        <a href="/register" class="navbarClass">Register</a>
-        <a href="/login" class="navbarClass">Login</a>
+        {% if session.get('username') %}
+            <a href="/account" class="navbarClass">Welcome, {{ session['username'] }}</a>
+        {% else %}
+            <a href="/account" class="navbarClass">Sign In</a>
+        {% endif %}
     </div>
-
 
     {% block content %}
 

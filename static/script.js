@@ -24,6 +24,7 @@ mangoClickEl.addEventListener("click", plusPoints)
 function plusPoints() {
     mangoPoints += mangoOnClick
     mangoScoreEl.innerText = mangoPoints
+    notEnoughMangosEl.innerHTML = ""
 } // 
 
 strongerHandsBuyEl.addEventListener("click", strongerHandsBuyJS)
@@ -86,7 +87,3 @@ setInterval(function() {
         mangoScoreEl.innerText = mangoPoints
     }
 }, 1000)
-
-document.getElementById("saveScoreForm").addEventListener("submit", function(event) {
-    document.getElementById("hiddenMangoScore").value = mangoPoints;
-});

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %} Account - Mango Clicker App {% endblock %}
+{% block content %}
+
+<h1>Account</h1>
+{% if session.get('username') %}
+    <p>Welcome, {{ session['username'] }}!</p>
+    <a href="/logout" class="navbarClass">Logout</a>
+{% else %}
+    <p>You are not logged in.</p>
+    <a href="/login" class="navbarClass">Login</a>
+    <p>or</p>
+    <a href="/register" class="navbarClass">Register</a>
+{% endif %}
+
+{% endblock %}

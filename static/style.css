@@ -20,6 +20,12 @@ body {
     user-select: none;
 }
 
+.navbar span {
+    font-weight: bold;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
 .navbar h1 {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -188,6 +194,8 @@ main {
     color: red;
     user-select: none;
 }
+
+
 
 footer {
     padding: 2rem;
