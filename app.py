@@ -57,14 +57,13 @@ def loginUser():
         conn.close()
 
         if user:
-            session['username'] = user['navn']  # Store username in session
-            return redirect("/")  # Redirect to home page after login
+            session['username'] = user['navn']
+            return redirect("/")
         else:
-            return render_template('login.html', error="Invalid credentials")
+            return render_template('login.html')
         
 @app.route("/logout")
 def logout():
-    session.clear()
     return redirect("/")
 
 if __name__ == "__main__":

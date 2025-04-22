@@ -192,10 +192,15 @@ main {
 
 #notEnoughMangos {
     color: red;
+    font-weight: bold;
     user-select: none;
 }
 
-
+.error {
+    color: red;
+    font-weight: bold;
+    user-select: none;
+}
 
 footer {
     padding: 2rem;
