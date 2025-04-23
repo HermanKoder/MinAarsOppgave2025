@@ -60,11 +60,13 @@ def loginUser():
             session['username'] = user['navn']
             return redirect("/")
         else:
+            print("Invalid username or password")
             return render_template('login.html')
         
 @app.route("/logout")
 def logout():
-    return redirect("/")
+    session.clear()
+    return redirect("/login")
 
 if __name__ == "__main__":
     app.run(debug=True)
