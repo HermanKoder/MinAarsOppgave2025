@@ -7,6 +7,10 @@ body {
     margin: 0;
 }
 
+.info {
+    width: 500px;
+}
+
 .navbar {
     display: flex;
     align-items: center;
