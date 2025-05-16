@@ -8,4 +8,5 @@ How can i download the game and see the code?
  - There you will be able to download it and open with your software.
 
 How can i run the code?
- - For python you will need to open a window
+ - For python you will need to open a PYTHON terminal and type python app.py
+ - From there open local host link: http://127.0.0.1:5000
