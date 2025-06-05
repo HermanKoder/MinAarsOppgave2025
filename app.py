@@ -60,7 +60,6 @@ def loginUser():
             session['username'] = user['navn']
             return redirect("/")
         else:
-            print("Invalid username or password")
             return render_template('login.html')
         
 @app.route("/logout")
@@ -68,5 +67,15 @@ def logout():
     session.clear()
     return redirect("/login")
 
+@app.route("/GiveGameReview", methods=['POST'])
+def GiveGameReview():
+    gameReview = request.form["review"]
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    cursor.execute("INSERT INTO feedback (review), VALUES (%s)", (gameReview))
+    conn.commit()
+    conn.close()
+    return redirect('index.html')
+    
 if __name__ == "__main__":
     app.run(debug=True)
