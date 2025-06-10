@@ -72,10 +72,10 @@ def GiveGameReview():
     gameReview = request.form["review"]
     conn = get_db_connection()
     cursor = conn.cursor()
-    cursor.execute("INSERT INTO feedback (review), VALUES (%s)", (gameReview))
+    cursor.execute("INSERT INTO feedback (review) VALUES (%s)", (gameReview,))
     conn.commit()
     conn.close()
-    return redirect('index.html')
+    return render_template('index.html')
     
 if __name__ == "__main__":
     app.run(debug=True)
